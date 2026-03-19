@@ -21,15 +21,17 @@ An end-to-end deep learning project that classifies images of cats and dogs. It 
  ├── 📄 predict_code.ipynb        # Local prediction testing notebook
  ├── 📄 requirements.txt          # Python dependencies
  └── 📄 Report.pdf                # Detailed project documentation
+```
 
-📌 Note on Dataset Handling
-To keep this repository lightweight, the raw .jpg images are not included. Instead, pre-processed pixel data is provided directly in the .csv files.
+## 📌 Note on Dataset Handling
+
+To keep this repository lightweight, the raw `.jpg` images are not included. Instead, pre-processed pixel data is provided directly in the `.csv` files.
 
 The Jupyter Notebooks are designed to be flexible:
+* By default, the code will load the provided `.csv` files so you can run the training and testing cells immediately.
+* **Want to process the raw images yourself?** Simply create `train_set/` and `test_set/` folders in the root directory. Inside each, add `cats/` and `dogs/` subfolders containing your images. The notebooks will automatically detect the folders, process the images, and generate fresh CSVs for you.
 
-By default, the code will load the provided .csv files so you can run the training and testing cells immediately.
+## ⚙️ Setup and Installation 
 
-Want to process the raw images yourself? Simply create train_set/ and test_set/ folders in the root directory. Inside each, add cats/ and dogs/ subfolders containing your images. The notebooks will automatically detect the folders, process the images, and generate fresh CSVs for you.
+To get the project running locally, simply clone the repository, activate a Python virtual environment, and run `pip install -r requirements.txt` to install all necessary dependencies such as FastAPI, PyTorch, and Pandas. **Note on PyTorch Installation:** The default requirements file installs the CPU version of PyTorch for quick and easy API testing; however, if you plan to re-train the neural network yourself, it is highly recommended to manually install the CUDA-enabled version from the official PyTorch website to take advantage of GPU acceleration.
 
-⚙️ Setup and Installation 
-To get the project running locally, simply clone the repository, activate a Python virtual environment, and run pip install -r requirements.txt to install all necessary dependencies such as FastAPI, PyTorch, and Pandas. Note on PyTorch Installation: The default requirements file installs the CPU version of PyTorch for quick and easy API testing; however, if you plan to re-train the neural network yourself, it is highly recommended to manually install the CUDA-enabled version from the official PyTorch website to take advantage of GPU acceleration.
